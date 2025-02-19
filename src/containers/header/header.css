@@ -1,0 +1,110 @@
+.scr__header{
+    display: flex;
+    flex-direction: column;
+}
+
+.scr__header-content{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 5rem;
+}
+
+.scr__header-content h2{
+    font-family: var(--font-family);
+    font-weight: 800;
+    font-size: 62px;
+    line-height: 75px;
+    letter-spacing: -0.04em;
+}
+
+.scr__header-content p, h4{
+    font-family: var(--font-family);
+    font-weight: normal;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 27px;
+
+    color: var(--color-text);
+    margin-top: 1.5rem;
+}
+
+.scr__header-btn{
+    margin-top: 2rem;
+    width: 70vh;
+    flex-direction: column;
+}
+
+.scr__header-btn button{
+    padding: 0.5rem 1rem;
+    color: #fff;
+    background: #ff4820;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 5px;
+    border-style: none;
+    cursor: pointer;
+}
+
+
+.scr__section{
+    display: flex;
+    flex-direction: column;
+    align-items: first baseline
+}
+.scr__section-img{
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+.scr__section-img img{
+    width: 100%;
+    height: 100%;
+    margin-right: 2rem;
+    object-fit: cover;
+    transform: translateX(100%); /* Start with the image off-screen to the right */
+    animation: slideInRight 1s ease-out forwards
+}
+
+@keyframes slideInRight {
+    
+    to {
+        transform: translateX(0); /* Slide the image to its normal position */
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .scr__header{
+        flex-direction: column;
+        margin: 0;
+        
+    }
+
+    .scr__header-content{
+        margin: 0 0 3rem;
+    }
+
+    .scr__header-btn{
+        width: 100%;
+        margin-top: 1rem;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .scr__header h2{
+        font-size: 40px;
+        line-height: 50px;
+    }
+
+    .scr__header p, h4{
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+}
